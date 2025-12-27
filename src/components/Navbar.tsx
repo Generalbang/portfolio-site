@@ -77,7 +77,7 @@ export default function Navbar() {
               </motion.a>
             ))}
             <motion.a
-              href="https://drive.google.com" // Update with your actual Google Drive link
+              href="https://drive.google.com/file/d/1Td6vWg5jtmXR2njupEsR2QoKLcze0yul/view?usp=drivesdk" // Update with your actual Google Drive link
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2 bg-deep-blue text-white text-sm font-semibold rounded-full hover:bg-blue-700 transition-colors"
