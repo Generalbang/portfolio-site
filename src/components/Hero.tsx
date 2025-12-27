@@ -55,7 +55,7 @@ export default function Hero() {
             variants={slideUp}
             className="text-gray-400 max-w-lg mx-auto md:mx-0 mb-8 leading-relaxed"
           >
-            Hey, I'm <span className="text-white font-medium">Codrex</span>—hustling from Nigeria, ready for remote gigs that challenge me. 
+            Hey, I'm <span className="text-white font-medium">Codrex</span>, an hustler from Nigeria, ready for remote gigs that challenge me. 
             Specializing in Next.js, MERN stack, and crafting buttery smooth user experiences.
           </motion.p>
 
