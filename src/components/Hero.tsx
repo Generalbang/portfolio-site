@@ -94,7 +94,7 @@ export default function Hero() {
 
       {/* Scroll Down Indicator */}
       <motion.div 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="hidden md:block md:absolute bottom-10 left-1/2 -translate-x-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
         transition={{ delay: 2, duration: 1.5, repeat: Infinity }}

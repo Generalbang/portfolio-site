@@ -77,13 +77,14 @@ export default function Navbar() {
               </motion.a>
             ))}
             <motion.a
-              href="#projects"
-              onClick={(e) => handleScrollTo(e, "#projects")}
+              href="https://drive.google.com" // Update with your actual Google Drive link
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-5 py-2 bg-deep-blue text-white text-sm font-semibold rounded-full hover:bg-blue-700 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              My Work
+              View My CV
             </motion.a>
           </div>
 

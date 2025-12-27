@@ -42,7 +42,7 @@ export default function About() {
             <motion.div variants={slideUp} className="pt-6">
               <a 
                 href="/resume.pdf" 
-                download="Codrex_Resume.pdf"
+                download="OJO DARE_Resume.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-colors text-white font-medium group"
               >
                 <span>Download Resume</span>
