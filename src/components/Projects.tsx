@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Patient medical Dashboard",
     description: "A medical dashboard for doctors to manage their patients and appointments.",
-    tech: ["React", "Tailwind", "Netlify", "React icons"],
+    tech: ["React", "Tailwind CSS", "Netlify", "React icons"],
     image: "/patient-dashboard.png",
     link: "#",
     github: "https://github.com/Generalbang/FED-Patient-board"
@@ -25,18 +25,28 @@ const projects = [
   {
     title: "Portfolio v1",
     description: "My previous portfolio site built with React. Simple, clean, but ready for this upgrade to Next.js 14.",
-    tech: ["React", "CSS3", "Vercel"],
+    tech: ["React", "Tailwind CSS", "Vercel"],
     image: "/portfolio-v1.png",
     link: "#",
     github: "https://github.com/Generalbang/Portfolio-v1"
   },
   {
-    title: "",
-    description: "",
-    tech: ["", "", "", ""],
-    image: "",
+    title: "AI Content Studio",
+    description: "A smart SaaS platform that generates and schedules social media content using Google Gemini. Features include drag-and-drop calendar, AI image generation, and multi-platform publishing.",
+    tech: ["Next.js", "Gemini API", "Stripe", "MongoDB", "Tailwind CSS"],
+    image: "/ai-scheduler.png",
     link: "#",
-    github: ""
+    github: "https://github.com/Generalbang/ai-content-scheduler",
+    comingSoon: true
+  },
+  {
+    title: "Crypto Wealth Dashboard",
+    description: "A real-time financial analytics platform reducing complex market data into actionable insights using interactive charts and live API feeds.",
+    tech: ["Next.js", "Chart.js", "CoinGecko API", "Tailwind CSS"],
+    image: "/finance-dashboard.svg",
+    link: "#",
+    github: "https://github.com/Generalbang/crypto-dashboard",
+    comingSoon: true
   }
 ];
 
@@ -74,6 +84,12 @@ export default function Projects() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                  {/* Coming Soon Badge */}
+                  {project.comingSoon && (
+                    <div className="absolute top-4 right-4 z-20 bg-deep-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg border border-white/20">
+                      Coming Soon
+                    </div>
+                  )}
                 </div>
 
                 {/* Content */}
@@ -96,23 +112,31 @@ export default function Projects() {
 
                   {/* Links */}
                   <div className="flex items-center gap-4">
-                    <a 
-                      href={project.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-medium text-white hover:text-deep-blue transition-colors"
-                    >
-                      <ExternalLink size={16} /> Live Demo
-                    </a>
-                    {project.github && (
-                      <a 
-                        href={project.github} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
-                      >
-                        <Github size={16} /> Code
-                      </a>
+                    {project.comingSoon ? (
+                      <span className="text-sm font-medium text-gray-500 cursor-not-allowed">
+                        In Development
+                      </span>
+                    ) : (
+                      <>
+                        <a 
+                          href={project.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-sm font-medium text-white hover:text-deep-blue transition-colors"
+                        >
+                          <ExternalLink size={16} /> Live Demo
+                        </a>
+                        {project.github && (
+                          <a 
+                            href={project.github} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                          >
+                            <Github size={16} /> Code
+                          </a>
+                        )}
+                      </>
                     )}
                   </div>
                 </div>
